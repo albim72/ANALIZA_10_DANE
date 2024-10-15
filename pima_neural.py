@@ -7,7 +7,8 @@ from sklearn.metrics import classification_report, confusion_matrix
 
 
 # Wczytanie danych
-data = pd.read_csv('pima-indians-diabetes.csv')
+col_names = ['pregnant','glucose','bp','skin','insulin','bmi','pedigree','age','label']
+pima = pd.read_csv('diabetes.csv',header=None,names=col_names)
 
 # Sprawdzenie pierwszych kilku wierszy danych
 print(data.head())
